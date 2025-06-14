@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-dev-qrcode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vite plugin that displays QR codes for dev server URLs in terminal",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sktm4a1/vite-plugin-dev-qrcode"
+    "url": "git+https://github.com/sktm4a1/vite-plugin-dev-qrcode.git"
   },
   "bugs": {
     "url": "https://github.com/sktm4a1/vite-plugin-dev-qrcode/issues"

@@ -1,0 +1,3 @@
+packages:
+  - 'examples' #  examples as a workspace package
+  - '.' # the root package

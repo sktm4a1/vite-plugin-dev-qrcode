@@ -58,7 +58,7 @@ function getQRCode(server: ViteDevServer, options: DevQRCodeOptions) {
     QRCode.generate(url, { small }, (qrcode) => {
       info(`\n${qrcode}\n`);
       if (verbose) {
-        info(`[dev-qrcode] Scan above QR code to open ${url} on mobile device`);
+        info(`[dev-qrcode] Scan above QR code to open ${url} on mobile device.`);
       }
     });
   });

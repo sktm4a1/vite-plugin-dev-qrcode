@@ -20,7 +20,7 @@ yarn add vite-plugin-dev-qrcode -D
 pnpm add vite-plugin-dev-qrcode -D
 ```
 
-## use
+## usage
 
 ```javascript
 import { defineConfig } from 'vite';
@@ -33,7 +33,7 @@ export default defineConfig({
 
 ![example](./examples/example.png 'example image')
 
-## 配置选项
+## options
 
 | Option  | Description                                | Default     |
 | ------- | ------------------------------------------ | ----------- |

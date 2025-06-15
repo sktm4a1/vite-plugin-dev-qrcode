@@ -1,4 +1,4 @@
-import type { Plugin, ViteDevServer } from 'vite';
+import type { Plugin, PreviewServer, ViteDevServer } from 'vite';
 import QRCode from 'qrcode-terminal';
 
 export interface DevQRCodeOptions {
@@ -32,11 +32,18 @@ export default function devQRCode(options: DevQRCodeOptions = { enabled: true })
 
         return _listen.apply(this, args);
       };
+    },
+    configurePreviewServer(server) {
+      if ('resolvedUrls' in server) {
+        server.httpServer?.once('listening', () => {
+          setTimeout(() => getQRCode(server, options), 0);
+        });
+      }
     }
   };
 }
 
-function getQRCode(server: ViteDevServer, options: DevQRCodeOptions) {
+function getQRCode(server: ViteDevServer | PreviewServer, options: DevQRCodeOptions) {
   const { verbose = true, small = true, filter } = options;
   const info = server.config.logger.info;
 
